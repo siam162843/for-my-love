@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For you Vabaa</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffaddc;
+        }
+
+        .latter {
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .letter-box img {
+            width: 200px;
+            margin-top: 20px;
+            margin-bottom: -50px;
+        }
+
+        .content {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        #that {
+            display: none;
+        }
+
+        .btn {
+            background-color: #ff1878;
+            box-shadow: 5px 5px 12px #5c0a2c;
+            border-radius: 10px;
+            padding: 2px 30px;
+            color: white;
+            font-size: 50px;
+        }
+
+        .box2 {
+            max-width: 90%;
+            opacity: 0;
+            padding: 1rem;
+            visibility: hidden;
+            transform: scale(0.8) translateY(0);
+            background-color: #ff7cb2;
+            border: 5px solid #b91559;
+            border-radius: 12px;
+            box-shadow: 10px 10px 20px #5c0a2c;
+            position: absolute;
+            top: 70px;
+            margin: auto;
+            margin-bottom: 20px;
+            transition: opacity 0.5s ease-in, visibility 1s ease-in, transform .5s ease-in;
+        }
+
+        #that:checked~ .box2 {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(-0px);
+        }
+        
+        p {
+            color: #72153c;
+            font-weight: 900;
+            margin-top: 10px;
+            margin-bottom: 0px;
+
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            background-color: #ff1878;
+            font-weight: 900;
+            color: #fff0f0;
+            padding: 12px 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 6px 6px 10px #7c0a2c81;
+            font-size: large;
+            text-align: center;
+        }
+
+        .box2 img {
+            width: 120px;
+            position: absolute;
+            right: -5px;
+            top: -60px;
+        }
+
+        .user {
+            text-align: start;
+            color: #b61658;
+            p {
+                font-size: 1.2rem;
+                line-height: 1.3rem;
+                font-weight: 900;
+                font-family: "Caveat";
+
+            }
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <main class="latter">
+        <div class="letter-box">
+            <img src="https://media.tenor.com/iS4-T1xc_fAAAAAi/milk-and-mocha.gif" alt="love letter">
+            <h1 class="dancing-text">
+                <span>It's</span> <span>for</span> <span>you</span> <span>Vabaa</span>
+            </h1>
+            <p>Click the latter!</p>
+        </div>
+        <div class="content">
+            <label for="that" class="btn"><h2 class="dancing-text"><span>💌</span></h2></label>
+            <input type="checkbox" id="that">
+            <div class="box2">
+                <img src="https://media.tenor.com/xJAlWK8qBdcAAAAi/milk-and-mocha-milk.gif" alt="teddy kisses">
+                <h1 class="user" style="font-family: 'Concert one';">Dearest VaBaa
+                <br>
+                    <p>Happy Valentine’s Day. <br> I wanted to take a moment to put into words what I don’t say often enough: you are the absolute best part of my life. <br> From the first time we meet in the next day of valentine, I knew there was something special about you. But I didn't realize then how much your love would become my favorite thing in the world. Whether we are watching each other, everything is simply better just because you are there. <br> As I look at you today, I want you to know something from the bottom of my heart. I don't just want you for today, or for the next year—I want you for the rest of my life. My biggest hope is that we get to experience every sunrise and every challenge together, all the way to the very end. <br> Thank you for being my person, my best friend, and my greatest adventure. I love you more than words can ever truly capture. <br> <br> Yours forever, <br> NANU</p>
+                    <a href="gift.html" style="font-family: 'Playpen Sans';">A surprise for you 😚</a>
+
+                </h1>
+            </div>
+        </div>
+    </main>
+    <div class="bubbles">
+        <div class="bubble-container">
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">🩷</div>    
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">✨</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+        </div>
+    </div>
+   
+</body>
+</html>

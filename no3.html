@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For you Vabaa</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 100%;
+      /* height: 100vh; */
+      background-color: #ffaddc;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .scroll {
+      margin: 10px auto;
+      display: flex;
+      overflow-x: auto;
+          
+
+      mask-image: linear-gradient(
+        to right, 
+          rgba(0, 0, 0, 0) 0%,    /* Left edge: Transparent */
+          rgba(0, 0, 0, 1) 30%,   /* 20% in: Fully visible */
+          rgba(0, 0, 0, 1) 70%,  
+          rgba(0, 0, 0, 0) 100%   /* Right edge: Transparent */
+      );
+    }
+
+    .scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      animation: spin 10s infinite linear;
+      padding-right: 1rem;
+    }
+
+    @keyframes spin {
+      from {
+        translate: 0;
+      }
+
+      to {
+        translate: -100%;
+      }
+
+    }
+
+    .scroll:hover .container {
+      animation-play-state: paused;
+    }
+
+    .card {
+      flex: 0 0 250px;
+      height: 350px;
+      font-size: 3rem;
+      border-radius: 1rem;
+      /* padding: 1rem; */
+      /* background-color: blue; */
+      text-align: center;
+      align-content: center;
+      border: 5px solid #ff1878;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+   
+
+
+    .dancing-text {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    
+
+           /* 2. Apply to the text */
+    .dancing-text span {
+      color: #ff1878;
+      display: inline-block; /* Required for transform to work */
+      animation: dance 1s infinite ease-in-out;
+    }
+
+    @keyframes dance {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-10px) rotate(-5deg); }
+      75% { transform: translateY(-5px) rotate(5deg); }
+    }
+
+           /* 3. Give each word a different delay so they don't move together */
+    .dancing-text span:nth-child(1) { animation-delay: 0.1s; }
+    .dancing-text span:nth-child(2) { animation-delay: 0.2s; }
+    .dancing-text span:nth-child(3) { animation-delay: 0.3s; }
+    .dancing-text span:nth-child(4) { animation-delay: 0.4s; }
+    .dancing-text span:nth-child(5) { animation-delay: 0.5s; }
+    .dancing-text span:nth-child(6) { animation-delay: 0.6s; }
+    .dancing-text span:nth-child(7) { animation-delay: 0.7s; }
+
+    p {
+      color: #72153c;
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #ff1878;
+      font-weight: 900;
+      color: #ffffff;
+      padding: 12px 20px;
+      margin: 10px;
+      margin-bottom: 150px;
+      border-radius: 8px;
+      box-shadow: 6px 6px 10px #7c0a2c81;
+    }
+
+
+                        /* scroliiiiiiiiiiiiiijhdfjksafhjsagfjkahsgjhfsagf */
+
+
+
+    .upornich{ padding: 2rem; padding-top:3rem; margin: 3px;display: flex;flex-direction: column;align-items: center;gap: 3rem;}.block1, .block2 {height: 400px; width: 300px; max-width: 100%; border-radius: 1rem; background: #ff0000; text-align: center; overflow: hidden; align-content: center; img { width: 100%; height: 100%;}}
+
+    .block1 {animation: scrolling1 linear;animation-timeline: view();animation-range: entry 0% cover 50%;}@keyframes scrolling1 {from {opacity: 0;transform: translateX(-150px) scale(0.5) rotate(20deg);}to {opacity: 1; transform: translate(0px) scale(1) ;}}
+
+    .block2 {animation: scrolling2 linear;animation-timeline: view();animation-range: entry 0% cover 50%;}@keyframes scrolling2 {from {opacity: 0;transform: translateX(150px) scale(0.5) rotate(-20deg);}to {opacity: 1; transform: translate(0px) scale(1);}}
+
+
+  </style>
+</head>
+<body>
+  <heading>
+    <h1 class="dancing-text">
+      <span>P</span><span>H</span><span>O</span><span>T</span><span>O</span><span>S</span><span>🎊</span>
+    </h1>
+    <p>Some memories with you Vabaa 😚</p>
+  </heading>
+  <main class="scroll">
+    <div class="container">
+      <div class="card"><img src="images/love1.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love2.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love3.jpeg" alt="love pic"></div>
+      <div class="card"><img src="images/love4.png" alt="love pic"></div>
+      <div class="card"><img src="images/love5.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love6.jpg" alt="love pic"></div>
+    </div>
+    <div aria-hidden="" class="container">
+      <div class="card"><img src="images/love1.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love2.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love3.jpeg" alt="love pic"></div>
+      <div class="card"><img src="images/love4.png" alt="love pic"></div>
+      <div class="card"><img src="images/love5.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love6.jpg" alt="love pic"></div>
+    </div>
+    <div aria-hidden="" class="container">
+      <div class="card"><img src="images/love1.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love2.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love3.jpeg" alt="love pic"></div>
+      <div class="card"><img src="images/love4.png" alt="love pic"></div>
+      <div class="card"><img src="images/love5.jpg" alt="love pic"></div>
+      <div class="card"><img src="images/love6.jpg" alt="love pic"></div>
+    </div>
+    
+    
+  </main>
+
+    <div class="upornich">
+        <div class="block1"><img src="images/lovein1.jpg" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein2.png" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein3.png" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein4.png" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein5.png" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein6.png" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein7.png" alt="love pic"></div>
+        <div class="block2"><img src="images/love20.jpeg" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein8.png" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein9.png" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein10.png" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein11.png" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein12.jpg" alt="love pic"></div>
+        <div class="block2"><img src="images/lovein13.jpg" alt="love pic"></div>
+        <div class="block1"><img src="images/lovein14.jpg" alt="love pic"></div>
+    </div>
+
+  <a href="gift.html">Next gift 😚</a>
+  <div class="bubbles">
+        <div class="bubble-container">
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">🩷</div>    
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">✨</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+        </div>
+  </div>
+
+</body>
+</html>

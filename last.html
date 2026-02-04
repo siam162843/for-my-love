@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For you Vabaa</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Center everything on the page */
+        body {
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #ffaddc;
+            padding: 2rem;
+        }
+
+        .player-card {
+            background: #ff7fb0;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 5px solid #b91559;
+            width: 100%;
+            img {
+                width: 150px;
+                margin: 20px;
+            }
+        }
+
+        h1 {
+            color: #880039;
+            
+        }
+
+        /* Styling the audio player width */
+        audio {
+            width: 100%;
+            outline: none;
+        }
+
+
+        /*  fjhdasfkjhsakfkjdsahfdjksahdfkjshfjksahfkjdhsakjhfhsafjksahfkjshfsak
+         ssssssssssssssssssssoooooooooooooooorrrrrrrrrrrryyyyyyyy */
+
+        .sorry-con {
+            height: 110vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background-color: transparent; 
+            
+            a {
+                display: inline-block;
+                text-decoration: none;
+                background-color: #ff1878;
+                font-weight: 900;
+                color: #ffffff;
+                padding: 12px 20px;
+                margin: 10px;
+                margin-bottom: 30px;
+                border-radius: 8px;
+                box-shadow: 6px 6px 10px #7c0a2c81;
+            }
+        }
+
+        .sorry {
+            text-align: center;
+            img {
+                width: 200px;
+                margin-left: -70px;
+            }
+
+            h1 {
+                font-size: 50px;
+                color: #ff1878;
+            }
+            p {
+                color: #520525;
+                font-weight: 900;
+                padding:1.5rem 0 ;
+            }
+        }
+
+        
+/* Hide the pop-up by default */
+.sorry-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7); /* Dim the background */
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+/* Show the pop-up when it is the URL target */
+.sorry-popup-overlay:target {
+    opacity: 1;
+    visibility: visible;
+  
+}
+
+/* Style the actual box */
+.sorry-popup-content {
+  background-color: #ffaddc;
+  border: 3px solid #ad265f;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  text-align: center;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    /* Start slightly smaller and lower */
+  transform: translateY(20px) scale(0.9);
+  transition: transform 0.7s ease-out;
+
+
+
+  img {
+    width: 150px;
+    animation: none;
+    margin: 0 auto;
+  }
+
+  h2 {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    font-weight: 900;
+    color: #ff006a;
+  }
+  p {
+    margin: 0.5rem auto;
+    padding: 0;
+  }
+}
+
+/* Slide up and grow when the overlay is targeted */
+.sorry-popup-overlay:target .popup-content {
+  transform: translateY(0) scale(1);
+}
+
+
+/* Style for the close button */
+
+
+
+     @keyframes dance2 {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(0px) scale(1.1); }
+        }
+
+           /* 2. Apply to the text */
+        .dancing span {
+            color: #ff006a;
+            display: inline-block; /* Required for transform to work */
+            animation: dance2 1s infinite steps(1);
+            font-size: 50px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="player-card">
+        <h1>Play the audio!</h1>
+        <img src="https://media.tenor.com/XvC2MfHQlNcAAAAi/milk.gif" alt="teddy singing">
+        <audio autoplay controls>
+            <source src="images/myau.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="color: #640303; font-size: 0.9rem; margin-top: 15px; font-weight: 900;">
+            Enjoy your music!
+        </p>
+    </div>
+
+    <div class="sorry-con">
+        <div class="sorry">
+            <img src="https://media.tenor.com/wsVaAXbCmWUAAAAi/mochi-mochi-peach-cute-cat.gif" alt="sorry teddy">
+            <h1 class="dancing"><span>Sorry!!</span></h1>
+            <p>Vabaa ami tmk chara pari nah thakte. Tumiee amr gota duniya. Amk khoma kore dao. Ami khub kosto dei tmk. Kintu jano ami tmr hat kokhonoi charte chai nah. Tumi toh janoi tmk chara ami thakte pari nah. Tumiee amr sob theke sukher akta jayga. Amr khub kosto hoy tumi amr opor rag kore thakle. Please rag nah kore theke amk khoma kore daoo. Please 🥹. Jodi khoma koro taile last button tah click koro 💝</p>
+        <div>
+            <a href="#sorry-popup-box">It's ok 😚</a>   
+        </div>
+            <div id="sorry-popup-box" class="sorry-popup-overlay">
+                <div class="sorry-popup-content">
+                    <img src="https://media.tenor.com/as7TwvDQMlcAAAAi/love.gif" alt="teddy kisses">
+                    <h2>Thank you so much!</h2>
+                    <p>🩷I love you Vabaa.💝</p>
+                    <!-- The Close Link -->
+                    <a href="https://wa.me/8801328749930?text=I%20love%20you%20too%20%F0%9F%92%95" target="_blank" class="sorry-close-btn">Text me 🤗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="bubbles">
+        <div class="bubble-container">
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">🩷</div>    
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">✨</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

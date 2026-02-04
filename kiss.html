@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiss me</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffaddc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        img {
+            width: 200px;
+            animation: bounch 1s steps(1) infinite;
+        }
+
+        .dancing-txt {
+            color: #ff1878;
+            animation: bounch 1s steps(1) infinite;
+        }
+
+        p {
+            color: #7c103d;
+            font-weight: 900;
+        }
+
+        @keyframes bounch {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(-5deg) scale(1.07);
+            }
+            40% {
+                transform: rotate(0deg);
+            }
+
+            60% {
+                transform: rotate(5deg);
+            }
+
+            
+        }
+
+
+/* 1. Updated: Use opacity instead of display:none */
+.popup-overlay {
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; /* Keep flex here */
+  justify-content: center;
+  align-items: center;
+  /* The Smoothness Settings */
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+/* 2. Updated: When it's clicked/targeted */
+.popup-overlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 3. Added a "Pop" effect to your content box */
+.popup-content {
+  background-color: #ffaddc;
+  border: 3px solid #ad265f;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 900px;
+  max-width: 90%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Start slightly smaller and lower */
+  transform: translateY(20px) scale(0.9);
+  transition: transform 0.7s ease-out;
+  h2 {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    font-weight: 900;
+    color: #ff006a;
+    }
+
+}
+
+/* Slide up and grow when the overlay is targeted */
+.popup-overlay:target .popup-content {
+  transform: translateY(0) scale(1);
+}
+
+/* Your existing styles for images/text */
+.popup-content img {
+  width: 100px;
+  animation: none;
+  margin-top: -30px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff1878;
+}
+
+
+video {
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.teddy-kiss {
+    animation: none;
+    width: 100px;
+    margin-top: 40%;
+    margin-bottom: -18px;
+}
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <img class="teddy-kiss" src="https://media.tenor.com/4XuyEUtrRCoAAAAi/kiss-cute.gif" alt="kissss">
+        <h1 class="dancing-txt">
+            <span>Kiss me!</span>
+        </h1>
+        <p>And you will get a surprise!</p>
+        <div class="kis_pic">
+            <a href="#popup-box"><img src="images/my.png" alt="my picture"></a>
+            <!-- <img class="teddy-kiss" src="https://media.tenor.com/4XuyEUtrRCoAAAAi/kiss-cute.gif" alt="kissss"> -->
+                    <!-- The Pop-up Div -->
+            <div id="popup-box" class="popup-overlay">
+                <div class="popup-content">
+                    <img src="https://media.tenor.com/sFStC1YwBzMAAAAi/milk-and-mocha-hug.gif" alt="teddy kisses">
+                    <h2>Ummmmmmmmm mmmmmmmahh!</h2>
+                    <p>Play the video baby.😘</p>
+                    <!-- The Close Link -->
+                    <a href="gift.html" class="close-btn">&times;</a>
+                    <video width="478" height="360" controls poster="thumbnail.jpg">
+                        <source src="images/myvid.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="bubbles">
+        <div class="bubble-container">
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">🩷</div>    
+            <div class="heart-bubble">💕</div>
+            <div class="heart-bubble">✨</div>
+            <div class="heart-bubble">💖</div>
+            <div class="heart-bubble">❤️</div>
+            <div class="heart-bubble">💕</div>
+        </div>
+    </div>
+
+</body>
+</html>
